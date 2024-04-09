@@ -6,7 +6,7 @@ class ArticleTest < ActiveSupport::TestCase
   end
 
   test "title includes click bait" do
-    Article::CLICK_BAIT = ["click me!"]
+    Norm::CLICK_BAIT = ["click me!"]
     assert Article.new(title: "a helpful title").title.start_with?("click me!")
   end
 
